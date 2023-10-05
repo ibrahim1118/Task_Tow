@@ -1,0 +1,41 @@
+﻿@model RegisterVM
+@{
+    ViewData["Title"] = "Register";
+}
+
+<h1>Register</h1>
+
+    <div class="container">
+       
+        <form method="post">
+            <div class="form-group">
+                <label asp-for="FirstName">First Name:</label>
+                <input asp-for="FirstName" class="form-control"  placeholder="Enter first name" required>
+                <span asp-validation-for="FirstName"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LastName">Last Name:</label>
+                <input asp-for="LastName" class="form-control"  placeholder="Enter last name" required>
+                <span asp-validation-for="LastName"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email">Email:</label>
+                <input asp-for="Email" class="form-control" placeholder="Enter email" required>
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password">Password:</label>
+                <input asp-for="Password" class="form-control" placeholder="Enter password" required>
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConfirmPassword">Confirm Password:</label>
+                <input asp-for="ConfirmPassword" class="form-control"  placeholder="Confirm password" required>
+                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+            </div>
+            <button type="submit" class="btn btn-primary mt-3">Register</button>
+            <a class="btn btn-primary mt-3" asp-action="LogIn">LogIn</a>
+        </form>
+    </div>
+
+

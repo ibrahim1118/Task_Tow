@@ -1,0 +1,16 @@
+﻿@model UserVM
+@{
+    ViewData["Title"] = "ProFile";
+}
+<h2>ProFile</h2>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">@Model.UserName</h5>
+        <h6 class="card-subtitle mb-2 text-muted">@Model.FirstName @Model.LastName</h6>
+        <p class="card-text">@Model.Email</p>
+      </div>
+    </div>
+  </div>
+</body>
